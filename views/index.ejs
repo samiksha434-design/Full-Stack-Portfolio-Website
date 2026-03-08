@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Style css -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="icon" href="/images/myProfilePic.jpeg">
+</head>
+<body>
+    <!-- Navbar -->
+     <header>
+        <a href="#home" class="logo">Samiksha</a>
+        <div id="menu-icon" class="fas fa-bars"><img src="/images/library_icon.png" alt="" class="imgTemp"></div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+     </header>
+
+    <% if(success.length){ %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= success[0] %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        <% } %>
+
+        <% if(error.length){ %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= error[0] %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    <% } %>
+
+     <!-- Home -->
+      <section class="home" id="home">
+        <div class="home-text">
+            <h1>Hi, I'm <span>Samiksha Dhumak</span></h1>
+            <h2>Aspiring MERN Stack Developer</h2><br>
+            <p>
+                I am a passionate Web Developer skilled in HTML, CSS, JavaScript,
+                Bootstrap, Node.js, Express.js, MongoDB, and MySQL. <br><br>
+                I enjoy building responsive, user-friendly, and full-stack web applications
+                while continuously learning new technologies and improving my development skills.
+            </p>
+            <div class="contact-buttons">
+                <a href="mailto:dhumaksamiksha76@gmail.com" class="btn">Email Me</a>
+                <a href="tel:7276053584" class="btn">Call Me</a>
+            </div>
+        </div>
+      </section>
+
+      <!-- About -->
+       <section class="about" id="about">
+            <div class="about-img">
+                <img src="/images/myProfilePic.jpeg" alt="">
+            </div>
+            <div class="about-text">
+                <h2>About Us</h2>
+                <h1>Samiksha Dhumak</h1>
+                <p>I am a passionate Web Developer who enjoys building responsive and user-friendly web applications.<br>
+                     I work with technologies like HTML, CSS, JavaScript, Bootstrap, Node.js, Express.js, MongoDB, and MySQL
+                     to create modern web projects and continuously improve my development and problem-solving skills.</p>
+                 
+                <h3>&#10148; Airbnb-Inspired Web Application :</h3>
+                <p>Developed a full-stack Airbnb-style web application where users can 
+                    explore property listings and view detailed information.
+                    Technologies used: HTML, CSS, Bootstrap, Node.js, Express.js, MongoDB.</p><br><br>
+                <h3>&#10148; Portfolio Website :</h3>
+                <p>Designed and developed a personal portfolio website to showcase my projects,
+                     skills, and learning journey as a web developer. 
+                     Technologies used: HTML, CSS, JavaScript, Bootstrap.</p><br><br>
+                <h3>&#10148; Simon Says Game :</h3>
+                <p>Built an interactive browser-based Simon Says game to practice JavaScript logic, DOM manipulation, and event handling.</p><br><br>
+                <h3>&#10148; Tic-Tac-Toe Game :</h3>
+                <p>Developed a classic Tic-Tac-Toe game using JavaScript with interactive UI and game logic implementation.</p>
+                <a href="#" class="btn">Download CV</a>
+            </div>
+       </section>
+
+       <!-- skills -->
+        <section class="skills" id="skills">
+            <div class="heading">
+                <h1>Skills</h1>
+            </div>
+            <!-- content -->
+             <div class="skills-content">
+                <div class="skills-bars">
+                    <div class="skill-text">
+                        <h2>My Skills</h2>
+                        <p>Technologies and tools I use to build responsive and full-stack web applications.</p>
+                    <div class="skills-box">
+                        <i><h3>HTML5</h3></i>  
+                    </div>
+                    <div class="skills-box">
+                        <i><h3>CSS3</h3></i>
+                    </div>
+                    <div class="skills-box">
+                        <i><h3>JavaScript</h3></i>
+                    </div>
+                    <div class="skills-box">
+                        <i><h3>BootStrap</h3></i>
+                    </div>
+                    <div class="skills-box">
+                        <i><h3>MongoDb</h3></i>
+                    </div>
+                    <div class="skills-box">
+                        <i><h3>NodeJs</h3></i>
+                    </div>
+                    <div class="skills-box">
+                        <i><h3>Express</h3></i>
+                    </div>
+                    <div class="skills-box">
+                        <i><h3>MySql</h3></i>
+                    </div>
+                    
+                </div>
+                <!-- <div class="skills-img">
+                    <img src="images/mySareePhoto.jpeg" alt="">
+                </div> -->
+             </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="project" id="project">
+            <div class="heading">
+                <h1>Projects</h1>
+            </div>
+
+            <!-- Content -->
+            <div class="project-content">
+                <% projects.forEach(p=>{ %>
+                <div class="p-box">
+                    <div class="p-img">
+                        <img src="<%= p.image %>" alt="">
+                    </div>
+                    <h2><%= p.title %></h2>
+                    <p><%= p.description %></p>    
+                    <a href="<%= p.github %>">Github</a>
+                    <a href="<%= p.live %>">Live</a>              
+                </div>
+                <% }) %>
+            </div>
+        </section>
+
+         <!-- Contact -->
+        <section class="contact" id="contact">
+            <div class="heading">
+                <h1>Contact</h1>
+            </div>
+            <!-- Contact Content -->
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-box">
+                        <a href="https://wa.me/917276053584" target="_blank">
+                            <i class="fa-brands fa-whatsapp" style="color: rgb(99, 230, 190);"></i>
+                            <p>7276053584</p>
+                        </a>
+                    </div>
+                    <div class="info-box">
+                        <a href="mailto:dhumaksamiksha76@gmail.com">
+                            <i class="fa-regular fa-envelope" style="color: rgb(99, 230, 190);"></i>
+                            <p>dhumaksamiksha76@gmail.com</p>
+                        </a>
+                    </div>
+                    <div class="info-box">
+                        <a href="https://maps.google.com" target="_blank">
+                            <i class="fa-solid fa-location-pin" style="color: rgb(99, 230, 190);"></i>
+                            <p>R.N.307 Ganesh Wadi Co.Op.HSG society GD Amedkar Road Parel</p>
+                        </a>
+                    </div>
+                    <div class="info-box social">
+                        <a href="https://instagram.com/__samiksha_dhumak__" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/samiksha434-design" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/samiksha-dhumak"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- contact Form -->
+                 <div class="contact-form">
+                    <form action="/contact" method="post">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Enter your Email" required>
+                        <textarea name="message" id="" rows="10" cols="30" placeholder="Write Your message here" required></textarea>
+                        <input type="submit" value="Send" class="contact-btn">
+                    </form>
+                 </div>
+            </div>
+        </section>
+
+        <!-- copyright -->
+         <div class="copyright">
+            <p>&#169; Samiksha Dhumak &hearts; All Right researved</p>
+         </div>
+
+
+         
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

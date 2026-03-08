@@ -1,0 +1,29 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "samiksha dhumak",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cloudinary": "^1.41.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^6.0.0",
+    "dns": "^0.2.2",
+    "dotenv": "^17.3.1",
+    "ejs": "^5.0.1",
+    "ejs-mate": "^4.0.0",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^9.2.4",
+    "multer": "^2.1.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "path": "^0.12.7"
+  },
+  "keywords": []
+}
